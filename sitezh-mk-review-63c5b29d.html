@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK体育 · 一份安静的介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f4f6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+            color: #2d3e4f;
+            line-height: 1.65;
+            padding: 2.5rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-container {
+            max-width: 780px;
+            width: 100%;
+        }
+
+        /* 开篇短句 —— 轻轻起笔 */
+        .opener {
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #1e2a38;
+            margin-bottom: 2rem;
+            padding: 0.3rem 0;
+            border-left: 4px solid #9aa9b8;
+            padding-left: 1.2rem;
+        }
+
+        .opener em {
+            font-style: normal;
+            color: #3f5e72;
+            font-weight: 500;
+        }
+
+        /* 卡片风格 */
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
+            border: 1px solid rgba(200, 210, 220, 0.5);
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.8rem;
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+
+        .card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2d3b;
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .card-title::before {
+            content: "—";
+            color: #9aa9b8;
+            font-weight: 300;
+            margin-right: 0.3rem;
+        }
+
+        /* 承接段落 */
+        .intro-text {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-text strong {
+            font-weight: 600;
+            color: #1f2d3b;
+        }
+
+        .intro-text a {
+            color: #3b6b8a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .intro-text a:hover {
+            border-bottom-color: #3b6b8a;
+        }
+
+        .signature-line {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #5a6f7e;
+        }
+
+        /* 特点列表 —— 干净、留白 */
+        .feature-list {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #edf0f3;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            min-width: 1.6rem;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            color: #5c7e98;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-content .label {
+            font-weight: 600;
+            color: #1f2d3b;
+        }
+
+        .feature-content .desc {
+            color: #4e6475;
+            font-size: 0.96rem;
+            margin-top: 0.1rem;
+        }
+
+        /* 温和结尾 */
+        .gentle-end {
+            margin-top: 0.8rem;
+            padding: 1rem 2rem 1.5rem;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8ed;
+        }
+
+        .gentle-end p {
+            font-size: 1rem;
+            color: #4a5f6f;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .gentle-end .meta-note {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #7c8e9c;
+            letter-spacing: 0.3px;
+        }
+
+        /* 极简响应 */
+        @media (max-width: 550px) {
+            body {
+                padding: 1.5rem 1.2rem;
+            }
+            .card {
+                padding: 1.4rem 1.3rem;
+            }
+            .opener {
+                font-size: 1.35rem;
+                padding-left: 1rem;
+            }
+            .card-title {
+                font-size: 1.15rem;
+            }
+            .feature-list li {
+                gap: 0.6rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .opener {
+                font-size: 1.2rem;
+            }
+            .card {
+                padding: 1.1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-container">
+
+    <!-- 开场短句 —— 不慌不忙，先打个招呼 -->
+    <div class="opener">
+        一个站点，<br>
+        慢慢聊自己。<br>
+        <span style="font-size:1rem; font-weight:300; color:#5b7386; display:inline-block; margin-top:0.6rem;">—— <em>MK体育</em> 的简要自述</span>
+    </div>
+
+    <!-- 卡片1：站点介绍 + 可信说明（承接段落） -->
+    <div class="card">
+        <div class="card-title">从一次安静的翻看开始</div>
+        <div class="intro-text">
+            <p>如果你偶然走到这里，可能会好奇 <a href="https://sitezh-mk.com">MK体育</a> 到底是什么。简单来说，它是一个围绕体育内容展开的站点，不喧哗，也不急于证明什么。站内的话题大多与日常赛事、运动信息以及基础数据有关，没有故弄玄虚的标题，也没有催促你留下的弹窗。</p>
+            <p style="margin-top:0.8rem;">最初搭建这个站的时候，团队只是想把一些可靠的体育信息整理出来，让感兴趣的人自己翻看。没有花哨的包装，也不会刻意制造紧迫感。站点使用时间久了，慢慢积累了一些朋友，这大概就是最踏实的认可。</p>
+        </div>
+        <div class="signature-line">
+            <span>— 内容保持克制的更新节奏，不跟风，不刷屏。</span>
+        </div>
+    </div>
+
+    <!-- 卡片2：特点列表 —— 用细节说话 -->
+    <div class="card">
+        <div class="card-title">几个让人安心的细节</div>
+        <ul class="feature-list">
+            <li>
+                <span class="feature-icon">📋</span>
+                <div class="feature-content">
+                    <div class="label">信息来源清晰</div>
+                    <div class="desc">每一条赛事动态或运动科普，都会注明参考依据，不编造，不夸张。你看到的就是经过核验的。</div>
+                </div>
+            </li>
+            <li>
+                <span class="feature-icon">🕊️</span>
+                <div class="feature-content">
+                    <div class="label">界面不打扰</div>
+                    <div class="desc">没有浮动广告、没有自动播放的视频。页面就是页面，内容就是内容，你可以按自己的节奏阅读。</div>
+                </div>
+            </li>
+            <li>
+                <span class="feature-icon">🔐</span>
+                <div class="feature-content">
+                    <div class="label">长期维护</div>
+                    <div class="desc">站点背后是一个小团队，定期更新与检查链接有效性。不做一锤子买卖，也不搞突然消失的套路。</div>
+                </div>
+            </li>
+            <li>
+                <span class="feature-icon">📊</span>
+                <div class="feature-content">
+                    <div class="label">内容平实</div>
+                    <div class="desc">不写「震惊」「必看」「马上行动」这类词。如果你喜欢朴素、直接的信息呈现方式，这里会比较对味。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 卡片3：一个场景片段（轻量的故事感） -->
+    <div class="card" style="background:#fafbfc;">
+        <div class="card-title" style="color:#2c4457;">比如某个午后</div>
+        <div style="font-size:1rem; color:#3d5567;">
+            <p>上周一位读者留言说，他习惯在午休时点开 <a href="https://sitezh-mk.com">MK体育</a>，翻翻当天的短讯和赛程笔记。没有推送通知打断，也不用担心刷出夸张的弹窗广告。“就像看一本旧杂志，很安静。”这是他原话。</p>
+            <p style="margin-top:0.7rem;">这种反馈让我们觉得，保持简单的样子是对的。站点不需要成为谁的负担，也不需要靠煽动情绪来留住人。信息本身如果足够真诚，自然会有人记得回来。</p>
+        </div>
+    </div>
+
+    <!-- 温和结尾 —— 缓缓收束 -->
+    <div class="gentle-end">
+        <p>如果你也喜欢这种不赶时间的节奏，不妨把这里当作一个安静的信息角落。没有注册门槛，没有积分任务，只有慢慢积累下的体育内容。</p>
+        <div class="meta-note">
+            <span>—— 欢迎随时来 <a href="https://sitezh-mk.com" style="color:#3b6b8a; text-decoration:none; font-weight:500;">MK体育</a> 坐坐，随便翻翻 · 不用着急</span>
+        </div>
+        <div class="meta-note" style="margin-top:0.5rem; font-size:0.75rem; color:#9aabb8;">
+            <span>© 一份安静的介绍页 · 内容持续完善中</span>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
